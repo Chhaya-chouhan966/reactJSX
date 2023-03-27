@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Document</title>
+
+    <style>
+       
+       #root{
+        display: flex;
+        justify-content: center;
+        margin: 30px;
+       }
+
+       #div{
+            width: 55%;
+            text-align: center;   
+        }
+         
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        var haeadOne = React.createElement("h1", {
+            id: "headOne",
+            style:{fontSize:"3rem"}
+        }, "About Us")
+
+        const paraOne = React.createElement("p", {
+            style: { textAlign: "center" }
+        }, `Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, harum?`)
+
+        const paraTwo = React.createElement("p", {
+            style: { textAlign: "center" }
+        },
+            `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste --- ipsa quisquam 
+    incidunt  minus, expedita porro minima perferendis eligendi perspiciatis.
+    Possimus blanditiis aspernatur quibusdam natus aut nobis sint ex quod laboriosam.
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsa quisquam 
+    incidunt  minus, expedita porro minima perferendis eligendi perspiciatis.
+    Possimus blanditiis aspernatur quibusdam natus aut nobis sint ex quod laboriosam.`)
+
+      const paraThree=React.createElement("p", {},
+      `Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ipsa quisquam 
+    incidunt  minus, expedita porro minima perferendis eligendi perspiciatis.
+    Possimus blanditiis aspernatur quibusdam natus aut nobis sint ex quod laboriosam.`)
+        const div = React.createElement("div", {
+            id: "div"
+        }, haeadOne, paraOne, paraTwo, paraThree)
+
+        var root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(div)
+    </script>
+</body>
+
+</html>
