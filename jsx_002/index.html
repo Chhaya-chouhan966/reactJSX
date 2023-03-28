@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #root {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            
+        }
+
+        #div {
+            height: 60%;
+            width: 40%;
+            margin: 80px;
+            border: 2px solid red;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #eb6564;
+            color: aliceblue;
+        }
+        #img{
+            color: aliceblue;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        const headOne = React.createElement("h1", {
+            style:{fontSize: "4.7rem", textAlign:"center"}
+        }, "The Evolution of Airbnb's Frontend")
+        
+        const para = React.createElement("h5", {
+            style:{fontSize: "1.8rem", textAlign:"center", marginTop:"50px"}
+        }, "@spikebrehm")
+       
+        const img = React.createElement("img", {
+            src: "./logo.png",
+            style:{backgrounColor:"aliceblue",width:"100px", height:"60px"},
+            id:"img"
+
+        })
+        const div = React.createElement("div", {
+            id: "div",
+        }, headOne, para, img)
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(div)
+    </script>
+</body>
+
+</html>
